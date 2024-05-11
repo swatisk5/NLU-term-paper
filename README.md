@@ -1,5 +1,8 @@
 # NLU-term-paper
 BPE vs unigramLM
+
+
+
 Unigram model
 Explaination:
 The code divides sentences or words into smaller chunks known as tokens. The `UnigramTokenizer` class is set up with two main parameters: the name of a language model that has already been trained (for example, "xlm-roberta-base") and the path to a file that has a corpus of text in the target language (for example, "odia_sentences.txt"). Inside this class, various dictionaries are created to store information about the frequency of words, characters, and subwords in the corpus, as well as the model itself.
@@ -9,6 +12,9 @@ Tokenization:
    - The `encode_word` method takes a word as input and breaks it down into subwords based on the model constructed earlier.
    - The `tokenize` method takes a piece of text as input, tokenizes it into words, and then further breaks down each word into subwords using the `encode_word` method.
 Evaluation: - The code can determine the model's loss and scores. In terms of how well it represents the language, these metrics help figure out how well the model is doing. Text from an input file is read by the `tokenize_file` method, which uses the model to turn it into tokens. The tokenized text is then written to an output file.
+
+
+
 BPE model
 The provided code introduces a class named BPETokenizer, which encapsulates the functionality to train a tokenizer based on Byte Pair Encoding (BPE) from a given text corpus and then utilize this trained tokenizer to tokenize text. The class is equipped with methods to accomplish tasks such as reading a corpus from a file, tokenizing text using the BPE tokenizer, computing pair frequencies, merging pairs of characters based on frequency, training the BPE tokenizer, applying the trained tokenizer to tokenize text, and saving the generated vocabulary to a file.
 BPETokenizer Class: This class is the core of the code. It's designed to tokenize text using Byte Pair Encoding (BPE).
